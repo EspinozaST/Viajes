@@ -6,10 +6,14 @@
     app:startDestination="@+id/nav_Viajes">
 
     <fragment
-        android:id="@+id/nav_home"
+        android:id="@+id/nav_viajes"
         android:name="com.example.viajes.ui.viajes.ViajesFragment"
         android:label="@string/menu_Viajes"
-        tools:layout="@layout/fragment_viajes" />
+        tools:layout="@layout/fragment_viajes" >
+        <action
+            android:id="@+id/action_nav_viajes_to_addViajesFragment"
+            app:destination="@id/addViajesFragment" />
+    </fragment>
 
     <fragment
         android:id="@+id/nav_gallery"
@@ -22,4 +26,13 @@
         android:name="com.example.viajes.ui.slideshow.SlideshowFragment"
         android:label="@string/menu_slideshow"
         tools:layout="@layout/fragment_slideshow" />
+    <fragment
+        android:id="@+id/addViajesFragment"
+        android:name="com.example.viajes.ui.viajes.addViajesFragment"
+        android:label="fragment_add_viajes"
+        tools:layout="@layout/fragment_add_viajes" >
+        <action
+            android:id="@+id/action_addViajesFragment_to_nav_viajes"
+            app:destination="@id/nav_viajes" />
+    </fragment>
 </navigation>

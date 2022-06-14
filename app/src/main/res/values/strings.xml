@@ -11,4 +11,9 @@
     <string name="menu_Viajes">Viajes</string>
     <string name="menu_gallery">Gallery</string>
     <string name="menu_slideshow">Slideshow</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="msg_nombres">Nombre del Viaje</string>
+    <string name="msg_error">Dato no correcto</string>
+    <string name="msg_viaje_add">Viaje Ingresado</string>
 </resources>
