@@ -4,7 +4,6 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.TextView
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.fragment.findNavController
@@ -14,7 +13,7 @@ import com.example.viajes.viewmodel.ViajesViewModel
 
 
 class ViajesFragment : Fragment() {
-    private lateinit var ViajesViewModel: ViajesViewModel
+    private lateinit var viajesViewModel: ViajesViewModel
     private var _binding: FragmentViajesBinding? = null
 
     // This property is only valid between onCreateView and
@@ -26,7 +25,7 @@ class ViajesFragment : Fragment() {
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
-        ViajesViewModel = ViewModelProvider(this).get(ViajesViewModel::class.java)
+        viajesViewModel = ViewModelProvider(this)[ViajesViewModel::class.java]
         _binding = FragmentViajesBinding.inflate(inflater, container, false)
 
         binding.addViajeBtn.setOnClickListener{
